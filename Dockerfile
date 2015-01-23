@@ -5,6 +5,7 @@ MAINTAINER Peter Niederlag "peter.niederlag@datenbetrieb.de"
 RUN apt-get update && \
     apt-get install -y php5-fpm php5-cli php5-gd php5-json php5-ldap php5-mcrypt php5-sqlite php5-xdebug php5-&& \
     curl -sS https://getcomposer.org/installer | php && \
+    mv composer.phar /usr/local/bin/composer && \
     rm -rf /var/lib/apt/lists/*
 
 COPY php-fpm.conf /etc/php5/fpm/php-fpm
