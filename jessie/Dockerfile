@@ -1,5 +1,5 @@
 # DOCKER-VERSION 1.0.0
-FROM datenbetrieb/debian:latest
+FROM datenbetrieb/debian:jessie
 MAINTAINER Peter Niederlag "peter.niederlag@datenbetrieb.de"
 
 RUN apt-get update && \
