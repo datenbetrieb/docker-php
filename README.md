@@ -1,4 +1,12 @@
-# datenbetrieb/php
+debian based php "all-in-one" docker image
+============================================
 
-docker image with php cli and fpm based on official debian packages
+automated build on docker hub
 
+php-cli
+php-fpm
+composer
+
+based on debian.
+
+see subdirectories for more information
