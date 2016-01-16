@@ -8,7 +8,7 @@ RUN apt-get update && \
     mv composer.phar /usr/local/bin/composer && \
     rm -rf /var/lib/apt/lists/*
 
-COPY php-fpm.conf /etc/php5/fpm/php-fpm
+COPY php-fpm.conf /etc/php5/fpm/php-fpm.conf
 
 EXPOSE 9000
 
