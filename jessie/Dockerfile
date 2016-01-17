@@ -13,5 +13,7 @@ COPY php-fpm.conf /etc/php5/fpm/php-fpm.conf
 
 EXPOSE 9000
 
+RUN usermod -u 1000 www-data
+
 #ENTRYPOINT ["php5-fpm"]
 CMD ["php5-fpm", "-F"]
