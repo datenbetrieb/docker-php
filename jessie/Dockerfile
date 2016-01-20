@@ -2,6 +2,15 @@
 FROM datenbetrieb/debian:jessie
 MAINTAINER Peter Niederlag "peter.niederlag@datenbetrieb.de"
 
+# install deployer
+RUN curl -L -o /usr/local/bin/dep http://deployer.org/deployer.phar && \
+    chmod +x /usr/local/bin/dep
+
+# install robo.li
+RUN curl -L -o /usr/local/bin/robo http://robo.li/robo.phar && \
+    chmod +x /usr/local/bin/robo
+
+# regular php stuff
 RUN apt-get update && \
     apt-get install -y php5-fpm php5-cli php5-gd php5-json php5-ldap php5-mcrypt php5-sqlite php5-xdebug php5-curl php5-ldap php5-mysql php5-xsl php5-&& \
     curl -sS https://getcomposer.org/installer | php && \
