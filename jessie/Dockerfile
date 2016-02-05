@@ -17,7 +17,8 @@ RUN apt-get update && \
     mv composer.phar /usr/local/bin/composer && \
     rm -rf /var/lib/apt/lists/*
 
-COPY 99-local-development.ini /etc/php5/fpm/conf.d/99-local-development.ini
+COPY 100-local-development.ini /etc/php5/fpm/conf.d
+
 COPY php-fpm.conf /etc/php5/fpm
 
 EXPOSE 9000
