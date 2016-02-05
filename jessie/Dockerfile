@@ -18,7 +18,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY 99-local-development.ini /etc/php5/fpm/conf.d/99-local-development.ini
-COPY php-fpm.conf /etc/php5/fpm/php-fpm.conf
+COPY php-fpm.conf /etc/php5/fpm
 
 EXPOSE 9000
 
